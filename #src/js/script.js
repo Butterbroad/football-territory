@@ -9,19 +9,31 @@ if (registerLinks.length > 0) {
 
 //modal 
 const modalTrigger = document.querySelector('.hero__info');
+const modal = document.querySelector('.modal');
 
-modalTrigger.addEventListener('click', () => {
-  const modal = document.querySelector('.modal');
-  modal.classList.add('active');
+function toggleModal() {
+  modal.classList.toggle('active');
 
   const modalClose = document.querySelector('.modal-info__close');
   modalClose.addEventListener('click', () => {
     modal.classList.remove('active');
   });
+}
 
+modalTrigger.addEventListener('click', (e) => {
+  e.stopPropagation();
+  toggleModal();
 });
 
-
+document.addEventListener('click', e => {
+  let target = e.target;
+  let isModal = target == modal;
+  let isTrigger = target == modalTrigger;
+  let menuIsActive = modal.classList.contains('active');
+  if (isModal && !isTrigger && menuIsActive) {
+    toggleModal();
+  }
+});
 
 
 
