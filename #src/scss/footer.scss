@@ -1,0 +1,37 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  @media (max-width: 425px) {
+    display: block;
+  }
+  // .footer__wrapper
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px
+  }
+
+  // .footer__socials
+
+  &__socials {
+    .socials {
+
+      // .socials__link
+    
+      &__link {
+        @media (max-width: 425px) {
+          max-width: 17px;
+          margin-right: 17px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+

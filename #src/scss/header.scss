@@ -8,6 +8,10 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 85px;
+
+    @media (max-width: 1600px) {
+      padding-top: 40px;
+    }
   }
 
   // .header__logo
@@ -23,8 +27,14 @@
     }
     @media (max-width: 1024px) {
       display: none;
+      max-width: 301px;
       &_md {
         display: block;
+      }
+    }
+    @media (max-width: 425px) {
+      &_md {
+        max-width: 188px;
       }
     }
   }
@@ -32,6 +42,9 @@
   // .header__socials
 
   &__socials {
+    @media (max-width: 425px) {
+      display: none;
+    }
   }
 }
 .socials {

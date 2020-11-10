@@ -26,6 +26,7 @@ modalTrigger.addEventListener('click', () => {
 
 
 
+
 function testWebP(callback) {
 
     var webP = new Image();

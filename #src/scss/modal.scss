@@ -32,6 +32,12 @@
     height: 80%;
     margin: 0 33px;
   }
+  @media (max-width: 1024px) and (min-height: 1365px) {
+    height: 65% !important;
+  }
+  @media (max-width: 800px) {
+    height: 90%;
+  }
   @media (max-width: 767px) {
     margin: 0 15px;
     height: 90%;
@@ -62,9 +68,9 @@
       }
       @media (max-width: 640px) {
         width: 20px;
-        height: 22px;
-        top: -10px;
-        right: -10px;
+        height: 20px;
+        top: 20px;
+        right: 20px;
       }
     }
     
@@ -95,9 +101,20 @@
       &::-webkit-scrollbar-thumb {
         background-color: #129A48;
       }
+      @media (max-width: 1024px) {
+        padding: 0 36px 25% 34px;
+      }
       @media (max-width: 767px) {
         margin-right: 11px;
-        padding: 0 25px 20px 22px;
+        padding: 0 25px 30% 22px;
+      }
+      @media (max-width: 425px) {
+        margin-right: 11px;
+        padding: 0 25px 40% 22px;
+      }
+      @media (max-width: 425px) {
+        margin-right: 11px;
+        padding: 0 25px 60% 22px;
       }
 		}
 
